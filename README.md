@@ -19,7 +19,7 @@ I also wrote a python file to plot the analytic solutions of these ODEs against 
 
 You may find versions of ARK depending on the kind of differential equation you're looking at either the `first_order` folder or `second_order` folder. 
 
-This personal project is in active development, so please feel free to submit issues! 
+This personal project is in active development, so please feel free to submit [issues](https://github.com/isoleph/ARK/issues) or a [pull request](https://github.com/isoleph/ARK/pulls)! 
 
 <div align="center">
     <img src=img/exp.svg width=50%>
