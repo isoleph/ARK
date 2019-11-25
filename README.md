@@ -4,11 +4,13 @@
 </div>
 
 <div align="center">
+
   [![Status](https://img.shields.io/badge/status-active-success.svg)]()
   [![GitHub Issues](https://img.shields.io/github/issues/isoleph/ARK)](https://github.com/isoleph/ARK/issues)
   [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/isoleph/ARK.svg)](https://github.com/isoleph/ARK/pulls)
   [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
   [![Tweet](https://img.shields.io/twitter/url/https/shields.io.svg?style=social)](https://twitter.com/astroparticular)
+
 </div>
 
 ARK is a personal project / C++ macro I wrote to numerically solve differential equations using the [Runge-Kutta Method](https://en.wikipedia.org/wiki/Runge–Kutta_methods). This algorithm is implemented using C++, which I chose for its speed and malleability. ARK will solve first order and second order differential equations; examples for ARK solving the exponential ODE and the Simple Harmonic Oscillator can be seen below!
@@ -20,11 +22,11 @@ You may find versions of ARK depending on the kind of differential equation you'
 This personal project is in active development, so please feel free to submit issues! 
 
 <div align="center">
-    <img src=img/exp.svg width = 150>
+    <img src=img/exp.svg width=50%>
     <p> Solution to the exponential ODE </p>
 </div>
 
 <div align="center">
-    <img src=img/sho.svg width= 150>
+    <img src=img/sho.svg width=50%>
     <p> Solution to the Simple Harmonic Oscilattor </p>
 </div>
