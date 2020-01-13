@@ -27,7 +27,7 @@ namespace dq {
     double derivative(double x, std::function<double (double)> func) {
         return (func(x + increment) - func(x))/(increment);
     }
-// definition of the second derivative numerically
+    // definition of the second derivative numerically
     double secondDerivative(double x, std::function<double (double)> func) {
         return (func(x + 2 * increment) - 2 * func(x + increment) + func(x))/(increment2);
     }
