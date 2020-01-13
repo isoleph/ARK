@@ -27,29 +27,29 @@ namespace dq {
     double derivative(double x, std::function<double (double)> func) {
         return (func(x + increment) - func(x))/(increment);
     }
-    // definition of the second derivative numerically
+// definition of the second derivative numerically
     double secondDerivative(double x, std::function<double (double)> func) {
         return (func(x + 2 * increment) - 2 * func(x + increment) + func(x))/(increment2);
     }
-}
 
-// calculate over N points within x_0 -> x_f for f'(x)
-int iterator(double x_0, double x_f, int N) {
-    double dx = (x_f - x_0)/N; 
-    double x_i = 0;
+    // calculate over N points within x_0 -> x_f for f'(x)
+    int PrintDerivative(double x_0, double x_f, int N) {
+        double dx = (x_f - x_0)/N;                          // evenly-spaced points
+        double x_i = 0;                                     // starting value
 
-    std::ofstream outfile;
-    outfile.open("dvs.csv");
-    for (int i = 0; i <= N; i++) {
-        x_i += dx;
-        outfile << x_i << ", " << dq::derivative(x_i, myFunction) << std::endl;
+        std::ofstream outfile;
+        outfile.open("dvs.csv");                            // print points to dvs.csv
+        for (int i = 0; i <= N; i++) {
+            x_i += dx;
+            outfile << x_i << ", " << dq::derivative(x_i, myFunction) << std::endl;
+        }
+        outfile.close();
+        return 0;
     }
-    outfile.close();
-    return 0;
 }
 
 
 int main() {
-    iterator(0, 10 * 3.14159, 100);
+    dq::PrintDerivative(0, 10 * 3.14159, 100);
     return 0;
 }
