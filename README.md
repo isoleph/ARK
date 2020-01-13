@@ -30,6 +30,6 @@ This personal project is in active development, so please feel free to submit [i
 </div>
 
 <div align="center">
-    <img src=img/deriv.svg width=50%>
+    <img src=img/dvs.svg width=50%>
     <p> Numerical derivative of sinc(x) </p>
 </div>
