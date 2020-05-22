@@ -17,11 +17,11 @@
 #include <functional>
 
 
-// import cmath definitions
+// import cmath defs
 #define _USE_MATH_DEFINE
+constexpr double pi = M_PI;
 
 // create shorthand for types later 
-constexpr double pi = M_PI;
 typedef std::function<double (double, double, double)> function;
 typedef std::vector<double> vector;
 
@@ -92,13 +92,12 @@ class RK4 {
             double y_n = y_0;                   // initial y value
             double yd_n = yd_0;                 // initial y' value
 
-            vector xpoints;                     // keep track of x-coordinates
-            vector ypoints;                     // array to save solutions
 
-            for(int i = 0; i <= n; i++) {
+            // pass calculate points to x and yvalues
+            for (int i = 0; i <= n; i++) {
                 double increment = h * i;
-                xpoints.push_back(t_0 + increment);
-                ypoints.push_back(y_n);
+                xvalues.push_back(t_0 + increment);
+                yvalues.push_back(y_n);
 
                 yd_n += 0.166667 * h * ( 
                         k1(t_0 + increment, y_n, yd_n, h, func)
@@ -115,15 +114,11 @@ class RK4 {
                     )
                 );
             }
-
-            xvalues = xpoints;
-            yvalues = ypoints;
         }
 };
 
 
 // create csv with numerical solution
-
 int main() {
 
     // remember proper initial conditions!!
