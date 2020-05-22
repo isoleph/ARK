@@ -16,7 +16,6 @@
 #include <vector>
 #include <functional>
 
-
 // import cmath defs
 #define _USE_MATH_DEFINE
 constexpr double pi = M_PI;
@@ -24,7 +23,6 @@ constexpr double pi = M_PI;
 // create shorthand for types later 
 typedef std::function<double (double, double, double)> function;
 typedef std::vector<double> vector;
-
 
 // function to integrate
 inline double myFunction(double x, double y, double yd) {
@@ -125,9 +123,9 @@ int main() {
     RK4 object = RK4(0, 2 * pi, 0, 1, 500, myFunction);
     vector results = object.yvalues;
 
+
     std::ofstream outfile;
     outfile.open("ARK2.csv");
-
     for (int i = 0; i < results.size(); i++) {
         outfile << object.xvalues[i] << ", " <<  object.yvalues[i] << std::endl;
     }
