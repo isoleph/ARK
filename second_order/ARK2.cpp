@@ -46,15 +46,15 @@ class RK4 {
             return c1n;
         }
         double c2 (double ydn, double h) {                          // c2n
-            c2n = ydn + 0.5 * h * k1n;
+            c2n = ydn + (0.5 * h * k1n);
             return c2n;
         }
         double c3 (double ydn, double h ) {                         // c3n
-            c3n = ydn + 0.5 * h * k2n;
+            c3n = ydn + (0.5 * h * k2n);
             return c3n;
         }
         double c4 (double ydn, double h) {                          // c4n
-            c4n = ydn + h * k3n;
+            c4n = ydn + (h * k3n);
             return c4n;
         }
 
@@ -84,7 +84,7 @@ class RK4 {
         vector yvalues;
 
         // initial t-value t_0, final t-value t_f, initial y-value y_0, numbers of steps n
-        RK4(double t_0, double t_f, double y_0, double yd_0, int n = 100, function func = myFunction) {
+        explicit RK4(double t_0, double t_f, double y_0, double yd_0, int n = 100, function func = myFunction) {
 
             double h = (t_f - t_0)/n;           // calculate incremental distances
             double y_n = y_0;                   // initial y value
@@ -127,7 +127,7 @@ int main() {
     std::ofstream outfile;
     outfile.open("ARK2.csv");
     for (int i = 0; i < results.size(); i++) {
-        outfile << object.xvalues[i] << ", " <<  object.yvalues[i] << std::endl;
+        outfile << object.xvalues[i] << ", " <<  object.yvalues[i] << "\n";
     }
     outfile.close();
     return 0;
