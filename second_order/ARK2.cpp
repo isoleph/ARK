@@ -15,12 +15,11 @@
 #include <cmath>
 #include <vector>
 #include <functional>
-
-// import cmath defs
 #define _USE_MATH_DEFS
-constexpr double pi = M_PI;
+
 
 // create shorthand for types later 
+constexpr double pi = M_PI;
 typedef std::function<double (double, double, double)> function;
 typedef std::vector<double> vector;
 

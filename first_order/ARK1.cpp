@@ -90,7 +90,7 @@ int main() {
     std::ofstream outfile;
     outfile.open("ARK1.csv");
     for (int i = 0; i < object.xvalues.size(); i++) {
-        outfile << object.xvalues[i] << ", " <<  object.yvalues[i] << std::endl;
+        outfile << object.xvalues[i] << ", " <<  object.yvalues[i] << "\n";
     }
     outfile.close();
     return 0;
